@@ -5,7 +5,7 @@ require ('./lib/title_case')
 require ('./lib/leetspeak')
 require('./lib/queen_attack')
 require ('./lib/clock_angle')
-
+require('./lib/scrabble')
 
 puts("Welcome to our program!")
 
@@ -17,6 +17,7 @@ while (resume)
   puts("3: L33t 5p34K")
   puts("4: Queen Attack")
   puts("5: Clock Angle")
+  puts("6: Scrabble Score Calculator")
   function = gets.chomp
 
   case function
@@ -60,6 +61,16 @@ while (resume)
     input = gets.chomp
     output = input.clock_angle
     puts("The angle between the Hour and Minute hands is #{output} degrees")
+  when "6"
+    puts("Scrabble Score Calculator")
+    puts("Please input a word")
+    input = gets.chomp
+    output = input.scrabble
+    if (output == 1)
+      puts("That word is worth 1 point")
+    else
+      puts("That word is worth #{output} points.")
+    end
   end
   puts("\n \n Would you like to run another program? Y/N ")
   doResume = gets.chomp
