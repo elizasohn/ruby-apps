@@ -21,6 +21,7 @@ while (resume)
   puts("5: Clock Angle")
   puts("6: Scrabble Score Calculator")
   puts("7: Number to word script")
+  puts("8: File comparator")
   function = gets.chomp
 
   case function
@@ -80,6 +81,33 @@ while (resume)
     input = gets.chomp
     output  = input.to_word()
     puts("Your number is #{output} \n")
+  when "8"
+    puts("File Comparator")
+    puts("Name of first file:")
+    file_a = gets.chomp
+    puts("Name of second file:")
+    file_b = gets.chomp
+
+    mode = "r"
+
+    file_a_content = File.read(file_a)
+    file_b_content = File.read(file_b)
+
+    file_a_score = file_a_content.scrabble()
+    file_b_score = file_b_content.scrabble()
+
+    puts("#{file_a}: #{file_a_score} points")
+    puts("#{file_b}: #{file_b_score} points")
+    if (file_a_score > file_b_score)
+      puts("File A has a higher score!")
+    elsif (file_a_score == file_b_score)
+      puts("They have the same score!")
+    else
+      puts("File B has a higher score!")
+    end
+    if (file_a_content == file_b_content)
+      puts("They are the same file!")
+    end 
   end
   puts("\n \n Would you like to run another program? Y/N ")
   doResume = gets.chomp
