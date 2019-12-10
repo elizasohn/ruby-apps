@@ -1,6 +1,6 @@
 # BDD Ruby - Monday
 
-## Created by Lillian Theuma and Veronica Stanley-Katz on 12/9/2019
+## Created by Lillian Theuma and Eliza Sohn on 12/9/2019
 
 ### Project Description
 This project was completed as part of the Epicodus in-class curriculum. The task description was as follows:

@@ -6,6 +6,8 @@ require ('./lib/leetspeak')
 require('./lib/queen_attack')
 require ('./lib/clock_angle')
 require('./lib/scrabble')
+require('./lib/numbers_to_words')
+
 
 puts("Welcome to our program!")
 
@@ -18,6 +20,7 @@ while (resume)
   puts("4: Queen Attack")
   puts("5: Clock Angle")
   puts("6: Scrabble Score Calculator")
+  puts("7: Number to word script")
   function = gets.chomp
 
   case function
@@ -71,6 +74,12 @@ while (resume)
     else
       puts("That word is worth #{output} points.")
     end
+  when "7"
+    puts("Number to word Calculator")
+    puts("Please input a number\n")
+    input = gets.chomp
+    output  = input.to_word()
+    puts("Your number is #{output} \n")
   end
   puts("\n \n Would you like to run another program? Y/N ")
   doResume = gets.chomp
