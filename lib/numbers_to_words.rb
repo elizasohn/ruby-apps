@@ -42,7 +42,23 @@ class String
     powers_of_ten.store(2,"million, ")
     powers_of_ten.store(3,"billion, ")
     powers_of_ten.store(4,"trillion, ")
-
+    powers_of_ten.store(5,"quadrillion,")
+    powers_of_ten.store(6,"quintillion,")
+    powers_of_ten.store(7,"sextillion,")
+    powers_of_ten.store(8,"septillion,")
+    powers_of_ten.store(9,"octillion,")
+    powers_of_ten.store(10,"nonillion,")
+    powers_of_ten.store(11,"decillion,")
+    powers_of_ten.store(12,"undecillion,")
+    powers_of_ten.store(13,"duodecillion,")
+    powers_of_ten.store(14,"tredicillion,")
+    powers_of_ten.store(15,"quattuordecillion,")
+    powers_of_ten.store(16,"quindecillion,")
+    powers_of_ten.store(17,"sexdecillion,")
+    powers_of_ten.store(18,"septendecillion,")
+    powers_of_ten.store(19,"octodecillion,")
+    powers_of_ten.store(20,"novemdecillion,")
+    powers_of_ten.store(21,"vigintillion,")
     output = []
     is_a_teen = false
 

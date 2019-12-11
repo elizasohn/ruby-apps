@@ -7,7 +7,7 @@ require('./lib/queen_attack')
 require ('./lib/clock_angle')
 require('./lib/scrabble')
 require('./lib/numbers_to_words')
-
+require('./lib/rolling_cipher')
 
 puts("Welcome to our program!")
 
@@ -22,6 +22,7 @@ while (resume)
   puts("6: Scrabble Score Calculator")
   puts("7: Number to word script")
   puts("8: File comparator")
+  puts("9: Rolling Cipher Encrypt/Decrypter")
   function = gets.chomp
 
   case function
@@ -107,7 +108,32 @@ while (resume)
     end
     if (file_a_content == file_b_content)
       puts("They are the same file!")
-    end 
+    end
+  when "9"
+    puts("Rolling Key Encryption program")
+    puts("Please enter the start point of your key")
+    key_start = gets.chomp
+    puts("Please enter the end point of your key")
+    key_end = gets.chomp
+    puts("Would you like to Encrypt(a) or Decrypt(b)?")
+    choice = gets.chomp
+    if (choice == "a")
+      puts("Which file would you like to enrypt")
+      read_file = gets.chomp
+      puts("Which file would you like to write the encrypted data too?")
+      puts("WARNING: This will overwrite files that already exist. We are not responsible for any losses if you give a current file as this name")
+      write_file = gets.chomp
+      encrypt(read_file, write_file, key_start.to_i, key_end.to_i, 1)
+    elsif (choice == "b")
+      puts("Which file would you like to decrypt")
+      read_file = gets.chomp
+      puts("Which file would you like to write the decrypted data too?")
+      puts("WARNING: This will overwrite files that already exist. We are not responsible for any losses if you give a current file as this name")
+      write_file = gets.chomp
+      encrypt(read_file, write_file, key_start.to_i, key_end.to_i, -1)
+    end
+
+    puts("Operation Complete")
   end
   puts("\n \n Would you like to run another program? Y/N ")
   doResume = gets.chomp
